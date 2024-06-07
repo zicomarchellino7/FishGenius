@@ -29,49 +29,36 @@ FISHGENIUS MACHINE LEARNING PROJECT README
 This ML project is our final project for Google Bangkit Academy 2024.
 
 **Android:**
-<a href="https://github.com/zicomarchellino7/FishGenius/tree/a8459c2fe7f8f91c5c1e6cac1996208444cf3627/Mobile%20Development">Tanamin Mobile Apps Developments</a>
+<a href="https://github.com/zicomarchellino7/FishGenius/tree/a8459c2fe7f8f91c5c1e6cac1996208444cf3627/Mobile%20Development">FishGenius Mobile Apps Developments</a>
 
 **Cloud:**
-[Tanamin Cloud Service](https://github.com/DocBot-Bangkit-2021/DocBot-Cloud)
+<a href="https://github.com/zicomarchellino7/FishGenius/tree/02781d2b7c67efcf5028eece3de8f0e92ade16f0/Cloud%20Computing">FishGenius Cloud Computing</a>
 
 **Project Background:**
-
-Rice and cassava are staple foods for all Indonesian people. Planting these plants takes a long time to be harvested, so special attention needs to be paid to these plants so as not to contract the disease and the occurrence of crop failure or quality degradation. To prevent this requires the ability of humans to select and treat plant diseases. However, manual checking takes a lot of time and effort and requires a lot of human resources.
-
-Based on these problems, can be prevented by providing technological solutions, namely building machine learning applications that can detect diseases of rice and cassava plants. The solution aims to assist farmers in increasing the efficiency of checking for the disease to prevent crop failures and improve society's welfare.
+Our team developed this project after identifying the need for easily accessible and accurate digital educational resources in the field of fish farming. We also recognized the untapped potential for growth in the Indonesian fisheries sector and the need for education aligned with technological advancements. With the motivation to empower fish farmers and raise awareness about sustainable farming practices, we created the FishGenius application as a solution to meet these needs and make a positive contribution to the global Indonesian fisheries industry.
 
 
 **Machine Learning:** 
-
-Machine Learning path build four kinds of models that include [Cassava Diseases](https://github.com/Bangkit-Capstone-Project/ML_Structuring_Model/tree/main/Cassava_disease), [Rice Diseases](https://github.com/Bangkit-Capstone-Project/ML_Structuring_Model/tree/main/Rice_disease), [Tomato Leaf disease detection](https://github.com/Bangkit-Capstone-Project/ML_Structuring_Model/tree/main/Tomato_disease) and [Vegetables detection](https://github.com/Bangkit-Capstone-Project/ML_Structuring_Model/tree/main/Vagetable). Build process using *baseline experiment, early stopping, checkpoint*. Pre-trained model or transfer learning by *resnet152v2, densenet121, inceptionv3, mobilenetv2*. The model was saved and deployed with *saved_model*.
+Machine Learning path build 8 classes using *early stopping, checkpoint*. Pre-trained model or transfer learning by *mobilenetv3*. The model was saved and deployed with *saved_model,*. Then the saved model converted to TensorFlow Lite.
 
 **Project Case :**
-
-- CassavaLeaf Diseases
-- Rice Plan Diseases
-- Vegetable Classification
-- Tomato Leaf Diseases
+- Ikan Bandeng
+- Ikan Salmon
+- Ikan Tuna
+- Ikan Lele
+- Ikan Nila
+- Ikan Bawal
+- Ikan Patin
+- Ikan Gurame
 
 **Our Dataset Link:**
+<a href="https://github.com/zicomarchellino7/FishGenius/tree/02781d2b7c67efcf5028eece3de8f0e92ade16f0/Machine%20Learning/datasets">FishGenius Datasets</a>
 
-* Cassava Diseases 
-  * [Cassava Leaf Diseases Datasets](https://www.kaggle.com/c/cassava-disease)
-  
-* Tomato Leaf  Diseases
-  * [Tomato Leaf Disease](https://www.kaggle.com/datasets/noulam/tomato)
-
-* Rice Plant Diseases
-  * [syahyanriyaz Dataset](https://www.kaggle.com/datasets/shayanriyaz/riceleafs)
-  * [Chandrug Dataset](https://www.kaggle.com/datasets/chandrug/riceleafdisease)
-  * [Tedisetiady Dataset](https://www.kaggle.com/datasets/tedisetiady/leaf-rice-disease-indonesia)
-  * [vbookshelf Dataset](https://www.kaggle.com/datasets/vbookshelf/rice-leaf-diseases)
-
-* Vegetable Classification 
-  * [Vegetables Dataset](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset)
 
 Preview of the image and data used are shown in the picture below.
 
-<img align="center" src="images\cassav.png"></img>
+<img align="center" src="Machine Learning/images/Ikan.png"></img>
+
 
 <p align="center">Cassava Leaf Diseases preview dataset </p>
 
