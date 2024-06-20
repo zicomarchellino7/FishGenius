@@ -1,0 +1,170 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "42404f8398d38d424d94f0cd9cdd26dd",
+    "entities": [
+      {
+        "tableName": "classes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_class` INTEGER NOT NULL, `title` TEXT NOT NULL, `detail` TEXT NOT NULL, `picture` TEXT NOT NULL, `total_module` INTEGER NOT NULL, `progress` REAL NOT NULL, `modul_title` TEXT NOT NULL, `lastest_module` INTEGER NOT NULL, PRIMARY KEY(`id_class`))",
+        "fields": [
+          {
+            "fieldPath": "id_class",
+            "columnName": "id_class",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detail",
+            "columnName": "detail",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "picture",
+            "columnName": "picture",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "total_module",
+            "columnName": "total_module",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progress",
+            "columnName": "progress",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modul_title",
+            "columnName": "modul_title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastest_module",
+            "columnName": "lastest_module",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id_class"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "modules",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_moduls` INTEGER NOT NULL, `classes_id` INTEGER NOT NULL, `title` TEXT NOT NULL, `content` TEXT NOT NULL, `picture` TEXT NOT NULL, `quiz_id` INTEGER NOT NULL, PRIMARY KEY(`id_moduls`))",
+        "fields": [
+          {
+            "fieldPath": "id_moduls",
+            "columnName": "id_moduls",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classes_id",
+            "columnName": "classes_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "picture",
+            "columnName": "picture",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quiz_id",
+            "columnName": "quiz_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id_moduls"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "informations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_informations` INTEGER NOT NULL, `name` TEXT NOT NULL, `content` TEXT NOT NULL, `benefit` TEXT NOT NULL, `classes_id` INTEGER NOT NULL, PRIMARY KEY(`id_informations`))",
+        "fields": [
+          {
+            "fieldPath": "id_informations",
+            "columnName": "id_informations",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "benefit",
+            "columnName": "benefit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classes_id",
+            "columnName": "classes_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id_informations"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '42404f8398d38d424d94f0cd9cdd26dd')"
+    ]
+  }
+}
