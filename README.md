@@ -1,7 +1,7 @@
 <h1 align="center">
   <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/c48faef7f9f5a4b28d1ad879f5d08cd5604bb98d/Machine%20Learning/images/Logo%20FishGenius.jpeg"  width="300"></img>
 <br>
-FISHGENIUS MACHINE LEARNING PROJECT README
+FISHGENIUS PROJECT README
 </h1>
 <div align="center">
 
