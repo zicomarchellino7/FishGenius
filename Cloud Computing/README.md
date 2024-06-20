@@ -7,6 +7,14 @@ FISHGENIUS CLOUD COMPUTING PROJECT README
 
 </div>
 
+# Cloud Computing Documentations
+
+# A. Cloud Computing Arsitectures
+
+<h1 align="center">
+  <img align="center" src="https://storage.googleapis.com/fg12/gambar/Cloud_Arsitructure.png"  width="500"></img>
+<br>
+
 # Team Profile
 
 ### Team ID : C241-PS311
