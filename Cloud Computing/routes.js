@@ -1,6 +1,13 @@
-const {register,login,home,classes,profil,moduleContent,detail_kelas,forum,informasi_gizi,profilEdit,quizCheck,createForum,getForumMassage,sendMassage,classProgress,auth} = require("./handler");
+const { register, login, home, classes, profil, moduleContent, detail_kelas, forum, profilEdit, quizCheck, createForum, getForumMassage, sendMassage, classProgress, auth } = require("./handler");
 
 const routes = [
+    {
+        method: 'GET',
+        path: '/',
+        handler: (request, h) => {
+            return 'Server sudah berjalan';
+        }
+    },
     {
         method: 'POST',
         path: '/register',
@@ -11,76 +18,65 @@ const routes = [
         path: '/login',
         handler: login
     },
-    { 
-        
+    {
         method: 'POST',
         path: '/home',
         handler: home,
-        config: {
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
     },
     {
-        config: {
-            ext: {
-                onPreAuth: { method: auth }
-            }
-        },
         method: 'POST',
         path: '/class',
-        handler: classes
-    },
-    {
-        config: {
+        handler: classes,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'POST',
         path: '/profile',
-        handler: profil
-    },
-    {
-        config: {
+        handler: profil,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'POST',
         path: '/module',
-        handler: moduleContent
-    },
-    {
-        config: {
+        handler: moduleContent,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'GET',
         path: '/module/{classid}',
-        handler: detail_kelas
+        handler: detail_kelas,
+        options: {
+            ext: {
+                onPreAuth: { method: auth }
+            }
+        },
     },
     {
-        config: {
-            ext: {
-                onPreAuth: { method: auth }
-            }
-        },
         method: 'GET',
         path: '/module/{classid}/forum',
-        handler: forum
-    },  
-    {
-        config: {
+        handler: forum,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
-        method: 'GET',
-        path: '/deteksi/{id}/informations',
-        handler: informasi_gizi
     },
     {
         method: 'POST',
@@ -95,50 +91,49 @@ const routes = [
                 multipart: {
                     output: 'stream'
                 },
-                maxBytes: 1000 * 1000 * 5
+                maxBytes: 1000 * 1000 * 5 // 5 MB limit
             }
         },
-        
     },
     {
-        config: {
-            ext: {
-                onPreAuth: { method: auth }
-            }
-        },
         method: 'POST',
         path: '/quizCheck',
-        handler: quizCheck
-    },
-    {
-        config: {
+        handler: quizCheck,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'POST',
         path: '/createForum',
-        handler: createForum
-    },
-    {
-        config: {
+        handler: createForum,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'GET',
         path: '/ForumMassage/{forumid}',
-        handler: getForumMassage
-    },
-    {
-        config: {
+        handler: getForumMassage,
+        options: {
             ext: {
                 onPreAuth: { method: auth }
             }
         },
+    },
+    {
         method: 'POST',
         path: '/sendMassage',
-        handler: sendMassage
+        handler: sendMassage,
+        options: {
+            ext: {
+                onPreAuth: { method: auth }
+            }
+        },
     },
     {
         method: 'POST',
@@ -153,10 +148,10 @@ const routes = [
                 multipart: {
                     output: 'stream'
                 },
-                maxBytes: 1000 * 1000 * 5
+                maxBytes: 1000 * 1000 * 5 // 5 MB limit
             }
         }
     },
-  ];
+];
 
 module.exports = routes;
