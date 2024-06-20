@@ -6,6 +6,22 @@ FISHGENIUS MOBILE DEVELOPMENT PROJECT README
 <div align="center">
 
 </div>
+# A. Mobile Development Architecture
+<h1 align="center">
+  <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/1.png"  width="500"></img>
+<br>
+<h1 align="center">
+  <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/2.png"  width="500"></img>
+<br>
+<h1 align="center">
+  <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/3.png"  width="500"></img>
+<br>
+<h1 align="center">
+  <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/4.png"  width="500"></img>
+<br>
+<h1 align="center">
+  <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/5.png"  width="500"></img>
+<br>
 
 # Team Profile
 
@@ -26,6 +42,8 @@ This MD project is our final project for Google Bangkit Academy 2024.
 
 **Mobile Development:**
 <a href="https://github.com/zicomarchellino7/FishGenius/tree/a8459c2fe7f8f91c5c1e6cac1996208444cf3627/Mobile%20Development">FishGenius Mobile Apps Developments</a>
+<br>
+<a href="http://linkedin.com/in/haical-ravinda-rassya-059319222">Linkedin Haical ravinda</a>
 
 **Cloud Computing:**
 <a href="https://github.com/zicomarchellino7/FishGenius/tree/main/Cloud%20Computing">FishGenius Cloud Computing</a>
