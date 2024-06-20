@@ -4,7 +4,6 @@ let fs = require('fs');
 const {Storage} = require("@google-cloud/storage");
 const jwt = require('jsonwebtoken');
 
-
 module.exports.register = async function(request,h){
     try {
         const { email, name, password } = request.payload;
@@ -16,7 +15,7 @@ module.exports.register = async function(request,h){
             if(metadata === 1){
                 const response = h.response({
                     status: 'success',
-                    message: 'berhasil membuat akun',
+                    message: 'successfully created an account',
                   });
                 response.code(201);
                 return response
@@ -24,7 +23,7 @@ module.exports.register = async function(request,h){
             else{
                 const response = h.response({
                     status: 'error',
-                    message: 'terjadi kesalahan dengan server',
+                    message: 'an error occurred with the server',
                   });
                 response.code(500);
                 return response
@@ -33,7 +32,7 @@ module.exports.register = async function(request,h){
         else{
             const response = h.response({
                 status: 'error',
-                message: 'tidak dapat membuat akun',
+                message: 'Cant create an account please try again later',
               });
             response.code(500);
             return response
@@ -43,7 +42,7 @@ module.exports.register = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'success',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -61,7 +60,7 @@ module.exports.login = async function(request,h){
                 // console.log(accessToken);
                 const response = h.response({
                     status: 'success',
-                    message: 'berhasil melakukan login',
+                    message: 'successfully login',
                     data: {
                         userid: id_user,
                         name: name,
@@ -74,7 +73,7 @@ module.exports.login = async function(request,h){
             else{
                 const response = h.response({
                     status: 'error',
-                    message: 'gagal untuk login, silahkan periksa kembali email atau password anda',
+                    message: 'failed to log in, please check your email or password again',
                   });
                 response.code(500);
                 return response
@@ -83,7 +82,7 @@ module.exports.login = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'success',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -118,7 +117,7 @@ module.exports.home = async function(request,h){
         else{
             const response = h.response({
                 status: 'success',
-                message: 'maaf anda belum memiliki kelas',
+                message: 'Sorry you dont have a class yet',
               });
             response.code(200);
             return response
@@ -127,7 +126,7 @@ module.exports.home = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -164,7 +163,7 @@ module.exports.classes = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'Error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -201,7 +200,7 @@ module.exports.profil = async function(request,h){
             const response = h.response({
                 status: 'error',
                 data: {
-                    message: 'maaf profil yang kamu cari tidak ada'
+                    message: 'Sorry the profile you are looking for doesnt exist'
                 }
               });
               response.code(401);
@@ -212,7 +211,7 @@ module.exports.profil = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'success',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -296,7 +295,7 @@ module.exports.moduleContent = async function(request,h){
         else{
             const response = h.response({
                 status: 'error',
-                message: 'maaf module yang kamu cari tidak ditemukan',
+                message: 'Sorry, the module you were looking for was not found',
               });
             response.code(500);
             return response
@@ -305,7 +304,7 @@ module.exports.moduleContent = async function(request,h){
         console.log(error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -332,7 +331,7 @@ module.exports.detail_kelas = async function (request, h) {
             else{
                 const response = h.response({
                     status: '',
-                    message: 'maaf kelas tidak ditemukan',
+                    message: 'sorry class not found',
                   });
                 response.code(201);
                 return response
@@ -341,7 +340,7 @@ module.exports.detail_kelas = async function (request, h) {
             console.log (error);
             const response = h.response({
                 status: 'success',
-                message: 'maaf terdapat masalah dengan koneksi',
+                message: 'Sorry there was a problem with the connection',
               });
             response.code(500);
             return response
@@ -365,7 +364,7 @@ module.exports.forum = async function (request, h) {
         else {
             const response = h.response({
                 status: 'success',
-                message: 'belum ada diskusi'
+                message: 'There are no forum discussions yet'
             });
             response.code(201);
             return response
@@ -375,48 +374,7 @@ module.exports.forum = async function (request, h) {
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
-          });
-        response.code(500);
-        return response
-    }
-}
-
-module.exports.informasi_gizi = async function (request, h) {
-    try {   
-        const {id} = request.params;
-        const [hasil] = await con.query('SELECT name,description, content, benefit FROM informations WHERE id_informations = '+id+'');
-        if( hasil.length > 0) {
-            let name = hasil[0].name;
-            let description = hasil[0].description;
-            let content = hasil[0].content;
-            let benefit = hasil[0].benefit;
-            const response= h.response({
-                status: 'success',
-                data: {
-                    judul: name,
-                    kandungan: content,
-                    manfaat: benefit,
-                    description: description
-                }
-            });
-            response.code (201);
-            return response
-            } 
-            else{
-                const response = h.response({
-                    status: 'fail',
-                    message: 'maaf informasi tidak ditemukan',
-                  });
-                response.code(404);
-                return response
-        } 
-    } 
-    catch (error) {
-        console.log(error);
-        const response = h.response({
-            status: 'success',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -431,16 +389,16 @@ module.exports.profilEdit = async function (request,h){
        if(request.payload.hasOwnProperty('profile_picture')){
            
            const gc = new Storage({
-               keyFilename: __dirname+'/fishgenius-424713-4890ae3b987b.json',
-               projectId: "fishgenius-424713"
+               keyFilename: __dirname+'',
+               projectId: ""
            });
 
-           const fg11Bucket = gc.bucket('fg11');
+           const Bucket = gc.bucket('');
 
             let ext = profile_picture.hapi.filename.split('.').pop();
             let picName =  userid+'_'+name+'.'+ext;
 
-            const blob = await profile_picture.pipe(fg11Bucket.file('profile/'+picName).createWriteStream({
+            const blob = await profile_picture.pipe(Bucket.file('profile/'+picName).createWriteStream({
                 resumable: false
             }));
            [update,metadata] = await con.query('UPDATE users SET age="'+age+'",address="'+address+'" ,name="'+name+'",profile_picture="'+picName+'" WHERE id_user = '+userid+'');
@@ -451,7 +409,7 @@ module.exports.profilEdit = async function (request,h){
        if(metadata !== 1){
         const response = h.response({
             status: 'success',
-            message: 'berhasil mengupdate profile'
+            message: 'successfully updated your profile'
           });
           response.code(201);
           return response
@@ -459,7 +417,7 @@ module.exports.profilEdit = async function (request,h){
        else{
         const response = h.response({
             status: 'error',
-            message: 'gagal mengupdate profile, terdapat masalah dengan server'
+            message: 'Failed to update profile, there is a problem with the server'
           });
           response.code(500);
           return response
@@ -468,7 +426,7 @@ module.exports.profilEdit = async function (request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -493,7 +451,7 @@ module.exports.quizCheck = async function(request,h){
        if(metadata === 1){
            const response = h.response({
                status: 'success',
-               message: 'berhasil memeriksa jawaban',
+               message: 'Quiz Feature Coming Soon',
                data: {score: score}
            });
            response.code(201);
@@ -504,7 +462,7 @@ module.exports.quizCheck = async function(request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Quiz Feature Coming Soon',
           });
         response.code(500);
         return response
@@ -519,7 +477,7 @@ module.exports.createForum = async function(request,h){
         if(metadata === 1){
             const response = h.response({
                 status: 'success',
-                message: 'berhasil membuat forum baru'
+                message: 'successfully created a new forum'
             });
             response.code(201);
             return response
@@ -527,7 +485,7 @@ module.exports.createForum = async function(request,h){
         else{
             const response = h.response({
                 status: 'error',
-                message: 'maaf terdapat masalah saat membuat forum',
+                message: 'Sorry there was a problem creating the forum',
               });
             response.code(500);
             return response
@@ -536,7 +494,7 @@ module.exports.createForum = async function(request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -564,7 +522,7 @@ module.exports.getForumMassage = async function(request,h){
         else{
             const response = h.response({
                 status: 'error',
-                message: 'maaf forum yang anda cari tidak ditemukan',
+                message: 'Sorry the forum you were looking for couldnt be found',
               });
             response.code(500);
             return response
@@ -574,7 +532,7 @@ module.exports.getForumMassage = async function(request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -589,7 +547,7 @@ module.exports.sendMassage = async function(request,h){
         if(metadata === 1){
             const response = h.response({
                 status: 'success',
-                message: 'berhasil mengirim pesan'
+                message: 'successfully sent a message to the forum'
             });
             response.code(201);
             return response
@@ -597,7 +555,7 @@ module.exports.sendMassage = async function(request,h){
         else{
             const response = h.response({
                 status: 'error',
-                message: 'maaf terdapat masalah saat mengirim pesan',
+                message: 'Sorry there was a problem sending the message',
               });
             response.code(500);
             return response
@@ -606,7 +564,7 @@ module.exports.sendMassage = async function(request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
@@ -619,25 +577,25 @@ module.exports.classProgress = async function(request,h){
         const {userid,classid,picture} = request.payload;
 
         const gc = new Storage({
-            keyFilename: __dirname+'/fishgenius-424713-4890ae3b987b.json',
-            projectId: "fishgenius-424713"
+            keyFilename: __dirname+'/',
+            projectId: ""
         });
 
         console.log(gc);
 
-        const fg11Bucket = gc.bucket('fg11');
+        const Bucket = gc.bucket('');
 
         let ext = picture.hapi.filename.split('.').pop();
         let picName =  userid+'_'+classid+'.'+ext;
 
-        const blob = await picture.pipe(fg11Bucket.file('progress/'+picName).createWriteStream({
+        const blob = await picture.pipe(fg12Bucket.file('progress/'+picName).createWriteStream({
             resumable: false
         }));
         const [update] = await con.query('UPDATE `progress` SET progres_pic = "'+picName+'" WHERE users_id = '+userid+' and classes_id='+classid+'');
     
         const response = h.response({
             status: 'success',
-            message: 'berhasil mengirim foto progress'
+            message: 'Successfully sent progress photos'
         });
         response.code(201);
         return response
@@ -646,7 +604,7 @@ module.exports.classProgress = async function(request,h){
         console.log (error);
         const response = h.response({
             status: 'error',
-            message: 'maaf terdapat masalah dengan koneksi',
+            message: 'Sorry there was a problem with the connection',
           });
         response.code(500);
         return response
