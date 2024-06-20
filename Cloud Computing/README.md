@@ -9,7 +9,7 @@ FISHGENIUS CLOUD COMPUTING PROJECT README
 
 # Cloud Computing Documentations
 
-# A. Cloud Computing Arsitectures
+# A. Cloud Computing Arcitectures
 
 <h1 align="center">
   <img align="center" src="https://storage.googleapis.com/fg12/gambar/Cloud_Arsitructure.png"  width="500"></img>
