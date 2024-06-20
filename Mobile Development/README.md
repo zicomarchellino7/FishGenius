@@ -21,11 +21,14 @@ FISHGENIUS MOBILE DEVELOPMENT PROJECT README
 * (MD) A009D4KY4402 – Haical Ravinda Rassya – Universitas Gunadarma
 * (MD) A156d4ky3483 – Mubdi Hariyanto – Sekolah Tinggi Teknologi Terpadu Nurul Fikri 
 
-# FishGenius Cloud Computing Project
-This CC project is our final project for Google Bangkit Academy 2024.
+# FishGenius Mobile Development Project
+This MD project is our final project for Google Bangkit Academy 2024.
 
 **Mobile Development:**
 <a href="https://github.com/zicomarchellino7/FishGenius/tree/a8459c2fe7f8f91c5c1e6cac1996208444cf3627/Mobile%20Development">FishGenius Mobile Apps Developments</a>
+
+**Cloud Computing:**
+<a href="https://github.com/zicomarchellino7/FishGenius/tree/main/Cloud%20Computing">FishGenius Cloud Computing</a>
 
 **Machine Learning:**
 <a href="https://github.com/zicomarchellino7/FishGenius/tree/d8f1e3f9c8119dd564db857c210dd4edd4381fc6/Machine%20Learning">FishGenius Machine Learning</a>
