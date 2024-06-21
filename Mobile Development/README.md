@@ -23,6 +23,9 @@ FISHGENIUS MOBILE DEVELOPMENT PROJECT README
   <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/5.png"  width="500"></img>
 <br>
 
+**Installation:**
+<a href="https://drive.google.com/file/d/1dLrvv8NrGfyq_SRFSiNpBotJM31Nudye/view?usp=sharing">FishGenius Application</a>
+
 # Team Profile
 
 ### Team ID : C241-PS311
