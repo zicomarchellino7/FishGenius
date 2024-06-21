@@ -34,6 +34,7 @@ FISHGENIUS PROJECT README
 **Project Background:**
 Our team developed this project after identifying the need for easily accessible and accurate digital educational resources in the field of fish farming. We also recognized the untapped potential for growth in the Indonesian fisheries sector and the need for education aligned with technological advancements. With the motivation to empower fish farmers and raise awareness about sustainable farming practices, we created the FishGenius application as a solution to meet these needs and make a positive contribution to the global Indonesian fisheries industry.
 
-
+**Link Apk:**
+https://storage.googleapis.com/fg12/FishGenius.apk
 
 Capstone Product "FishGenius" Repository #Bangkit2024
