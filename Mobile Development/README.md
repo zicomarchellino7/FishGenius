@@ -30,12 +30,11 @@ FISHGENIUS MOBILE DEVELOPMENT PROJECT README
 ```bash
 git clone https://github.com/zicomarchellino7/FishGenius.git
 ```
-Or you can use Android Studio
+and open Android Studio
 
-<h3>2. Select folder Mobile Development</h3>
-<h3>3. Open the Project Folder <strong>Mobile Development</strong> in your Android Studio</h3>
-<h3>4. Run Project in Android Studio</h3>
-<p>Wait for Grandle Build to Finisih and finally press the Run > Run 'app'. Now the app has been installed in your phone.</p>
+<p>In Android Studio, click on File > Open -> Navigate to the cloned repository directory and select the Mobile Development folder -> Click OK</p>
+<h3>2.Run Project in Android Studio</h3>
+Wait for Grandle Build to Finish and finally press the Run > Run 'app'. Now the app has been installed in your phone/emulator.
 <h3>Thank you :)</h3>
 
 ## Installation
