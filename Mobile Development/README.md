@@ -40,7 +40,7 @@ Wait for Grandle Build to Finish and finally press the Run > Run 'app'. Now the 
 ## Installation
 Our application is based on Android OS. In order to use our application, you will need an Android device that can runs at least Android OS Version 6.0 (Marshmallow). You can download our application (.apk) from the link down below.
 ```bash
-https://drive.google.com/file/d/1dLrvv8NrGfyq_SRFSiNpBotJM31Nudye/view?usp=drive_link
+https://storage.googleapis.com/fg12/FishGenius.apk
 ```
 
 # Team Profile
