@@ -37,4 +37,7 @@ Our team developed this project after identifying the need for easily accessible
 **Link Apk:**
 https://storage.googleapis.com/fg12/FishGenius.apk
 
+**Our Vidio Presentation Link**
+https://www.youtube.com/watch?v=gLG298MNkws&feature=youtu.be
+
 Capstone Product "FishGenius" Repository #Bangkit2024
