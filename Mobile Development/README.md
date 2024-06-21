@@ -23,8 +23,26 @@ FISHGENIUS MOBILE DEVELOPMENT PROJECT README
   <img align="center" src="https://github.com/zicomarchellino7/FishGenius/blob/2d298f68f4ffe3fde91880cc6c95492e52a8ee1a/Mobile%20Development/Design/5.png"  width="500"></img>
 <br>
 
-**Installation:**
-<a href="https://drive.google.com/file/d/1dLrvv8NrGfyq_SRFSiNpBotJM31Nudye/view?usp=sharing">FishGenius Application</a>
+# How to Installation
+
+<h3>1. Clone this Project to your Computer</h3>
+
+```bash
+git clone https://github.com/zicomarchellino7/FishGenius.git
+```
+Or you can use Android Studio
+
+<h3>2. Select folder Mobile Development</h3>
+<h3>3. Open the Project Folder <strong>Mobile Development</strong> in your Android Studio</h3>
+<h3>4. Run Project in Android Studio</h3>
+<p>Wait for Grandle Build to Finisih and finally press the Run > Run 'app'. Now the app has been installed in your phone.</p>
+<h3>Thank you :)</h3>
+
+## Installation
+Our application is based on Android OS. In order to use our application, you will need an Android device that can runs at least Android OS Version 6.0 (Marshmallow). You can download our application (.apk) from the link down below.
+```bash
+https://drive.google.com/file/d/1dLrvv8NrGfyq_SRFSiNpBotJM31Nudye/view?usp=drive_link
+```
 
 # Team Profile
 
